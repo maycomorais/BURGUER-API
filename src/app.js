@@ -1,4 +1,6 @@
 import burguerRouter from "./routes/burguer-router.js";
+import usuariosRouter from './routes/usuarios.routes';
+import loginRouter from './routes/login.routes';
 import express from "express";
 import cors from "cors";
 
@@ -14,5 +16,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/burguers", burguerRouter);
+app.use('/usuarios', usuariosRouter);
+app.use('/login', loginRouter);
 
 export default app;
